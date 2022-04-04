@@ -1,17 +1,16 @@
 server:
-  port: 8080
+  port: 8082
+
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
 
 spring:
   application:
-    name: customer
+    name: eurika
   datasource:
     password: postgres
     url: jdbc:postgresql://localhost:5432/mytestdb
     username: postgres
     driver: org.postgresql.Driver
-
-eureka:
-  client:
-    server-url:
-     defaultZone: http://localhost:8082/
-

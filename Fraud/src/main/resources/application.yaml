@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: fraud
+  datasource:
+    password: pass
+    url: jdbc:postgresql://localhost:5431/myfrauddb
+    username: anton
+    driver: org.postgresql.Driver
