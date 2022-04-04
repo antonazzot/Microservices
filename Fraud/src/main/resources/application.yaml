@@ -9,3 +9,8 @@ spring:
     url: jdbc:postgresql://localhost:5431/myfrauddb
     username: anton
     driver: org.postgresql.Driver
+eureka:
+  client:
+    server-url:
+      defaultZone: http://localhost:8761/
+

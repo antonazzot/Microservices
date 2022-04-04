@@ -27,7 +27,7 @@ public class CustomerService {
     public Integer saveCustomer (Customer customer) throws IllegalAccessException {
         if (
                 Boolean.TRUE.equals(
-                        restTemplate.getForObject("http://localhost:8081/fraudcheck/byemail/{email}",
+                        restTemplate.getForObject("http://FRAUD/fraudcheck/byemail/{email}",
                         Boolean.class, customer.getEmail()))
         )
             throw new IllegalAccessException("Frauder detected");
