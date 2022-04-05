@@ -4,8 +4,7 @@ import customerApplication.customerrepository.CustomerRepository;
 import customerApplication.model.Customer;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -31,7 +30,13 @@ public class CustomerService {
                         Boolean.class, customer.getEmail()))
         )
             throw new IllegalAccessException("Frauder detected");
-        else
-        return customerRepository.save(customer).getId();
+        else {
+
+            Integer id = customerRepository.save(customer).getId();
+            restTemplate.postForEntity("http://NOTIFICATION/notify/hellonotify/{customer}",
+            customer, Integer.class, customer);
+
+            return id;
+        }
     }
 }

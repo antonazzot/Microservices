@@ -7,7 +7,8 @@
 		<module>Customer</module>
         <module>Fraud</module>
 		<module>eureka-server</module>
-	</modules>
+        <module>Notification</module>
+    </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>

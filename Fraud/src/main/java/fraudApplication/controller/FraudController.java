@@ -1,8 +1,10 @@
 package fraudApplication.controller;
 
+import customerApplication.model.Customer;
 import fraudApplication.service.FraudEmailService;
 import fraudApplication.service.FraudService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -30,5 +32,11 @@ public class FraudController {
     @ResponseBody
     public boolean frauderByEmail (@PathVariable String email) {
         return  fraudEmailService.isFraudEmail(email);
+    }
+
+    @PostMapping("/addtoblacklist/{customer}")
+    @ResponseBody
+    public ResponseEntity<?> addToBlackList (@RequestBody Customer customer) {
+    f
     }
 }

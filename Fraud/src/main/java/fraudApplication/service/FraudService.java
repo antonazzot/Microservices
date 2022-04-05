@@ -1,5 +1,6 @@
 package fraudApplication.service;
 
+import customerApplication.model.Customer;
 import fraudApplication.model.Frauder;
 import fraudApplication.repository.FraudRepository;
 import lombok.RequiredArgsConstructor;
@@ -18,5 +19,14 @@ public class FraudService {
         if (frauder!=null)
         return frauder.isIsfraud();
         else return true;
+    }
+
+    public void addCustomerToBlackList (Customer customer) {
+        Frauder frauder = Frauder.builder()
+                .customerId(customer.getId())
+                .isfraud(true)
+                .build();
+        fraudRepository.save(frauder);
+
     }
 }
