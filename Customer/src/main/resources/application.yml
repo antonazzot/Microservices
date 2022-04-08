@@ -6,10 +6,12 @@ spring:
     name: customer
   datasource:
     password: postgres
-    url: jdbc:postgresql://localhost:5432/mytestdb
+    url: jdbc:postgresql://localhost:5431/customerdb
     username: postgres
     driver: org.postgresql.Driver
-
+  kafka:
+    bootstrap-servers: localhost:9092
+  
 eureka:
   client:
     server-url:

@@ -13,7 +13,7 @@ public class FraudEmailService {
     private final FraudEmailRepository fraudEmailRepository;
 
     public boolean isFraudEmail (String email) {
-        Optional<FrauderEmail> frauderByEmail = fraudEmailRepository.findFrauderByEmail(email);
+        Optional<FrauderEmail> frauderByEmail = fraudEmailRepository.findFrauderEmailByEmail(email);
         return frauderByEmail.map(FrauderEmail::isFraud).orElse(false);
     }
 }

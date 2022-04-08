@@ -11,6 +11,6 @@ spring:
     name: eurika
   datasource:
     password: postgres
-    url: jdbc:postgresql://localhost:5432/mytestdb
+    url: jdbc:postgresql://localhost:5430/evreka
     username: postgres
     driver: org.postgresql.Driver

@@ -1,21 +1,16 @@
 server:
-  port: 8082
-
+  port: 8081
 spring:
   application:
-    name: notification
+    name: fraud
   datasource:
     password: pass
-    url: jdbc:postgresql://localhost:5430/mynotificatedb
+    url: jdbc:postgresql://localhost:5433/frauderdb
     username: anton
     driver: org.postgresql.Driver
-  mail:
-    mailfrom: filfilfillipliplip@gmail.com
-    frompass: 329297929z
 
 eureka:
   client:
     server-url:
       defaultZone: http://localhost:8761/
-
 

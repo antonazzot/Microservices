@@ -1,0 +1,17 @@
+server:
+  port: 8079
+
+spring:
+  application:
+    name: kafka
+  kafka:
+    bootstrap-servers: localhost:9092
+  datasource:
+    password: postgres
+    url: jdbc:postgresql://localhost:5431/customerdb
+    username: postgres
+    driver: org.postgresql.Driver
+eureka:
+  client:
+    server-url:
+      defaultZone: http://localhost:8761/

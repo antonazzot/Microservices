@@ -37,6 +37,6 @@ public class FraudController {
     @PostMapping("/addtoblacklist/{customer}")
     @ResponseBody
     public ResponseEntity<?> addToBlackList (@RequestBody Customer customer) {
-    f
+        return  ResponseEntity.ok(customer);
     }
 }
